@@ -5,8 +5,6 @@ import math
 
 
 
-
-
 class Window():
     def __init__(self) -> None:
         self.width = 400
@@ -34,7 +32,6 @@ class Window():
         self.var = StringVar()
         self.text_area = Entry(root, bg=self.btn_color, font = ("Sans MS", 40), textvariable = self.var)
         self.text_area.place(x=0, y=0, width=400, height=80)
-
 
                 
             
@@ -87,7 +84,9 @@ class Window():
         #run program window
         root.mainloop()
 
+        
     def callback(self, *args):
+        #prevnts from typing chars that are not numbers or "."
         item = self.var.get()
         item = item.replace(",",".")
             
